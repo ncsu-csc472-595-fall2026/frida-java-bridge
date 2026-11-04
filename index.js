@@ -47,6 +47,7 @@ class Runtime {
     this._pendingMainOps = [];
     this._pendingVmOps = [];
     this._cachedIsAppProcess = null;
+    Object.defineProperty(this, '__w2aPatchedBridge', { value: true });
 
     try {
       this._tryInitialize();
